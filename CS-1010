@@ -28,45 +28,59 @@ def showTenth():
     tenthFrame.tkraise()
 def showEleven():
     eleventhFrame.tkraise()
+def showThirteenth():
+    ThirteenthFrame.tkraise()
+def showFourthteen():
+    FourthteenFrame.tkraise()
 
     
 # Parent widget for the buttons
 top_frame = tk.Frame(mainwindow, bg="cyan", highlightbackground="black", 
 highlightthickness=1)
-top_frame.grid(row=0, column=0, columnspan=10, sticky=tk.N+tk.W+tk.E)
+top_frame.grid(row=0, column=0, columnspan=20, sticky=tk.N+tk.W+tk.E)
+
+reset = tk.Button(top_frame, text='RESET', width='5', command=showFourthteen)
+reset.grid(row=0, column=0, padx=(10), pady=10)
 
 btn_f1 = tk.Button(top_frame, text='1', width='5', command=showRed)
-btn_f1.grid(row=0, column=0, padx=(10), pady=10)
+btn_f1.grid(row=0, column=1, padx=(10), pady=10)
 
 btn_f2 = tk.Button(top_frame, text='2', width='5', command=showGreen)
-btn_f2.grid(row=0, column=1, padx=(10), pady=10)
+btn_f2.grid(row=0, column=2, padx=(10), pady=10)
 
 btn_f3 = tk.Button(top_frame, text='3', width='5', command=showBlue)
-btn_f3.grid(row=0, column=2, padx=(10), pady=10)
+btn_f3.grid(row=0, column=3, padx=(10), pady=10)
 
 btn_f4 = tk.Button(top_frame, text='4', width='5', command=showYellow)
-btn_f4.grid(row=0, column=3, padx=(10), pady=10)
+btn_f4.grid(row=0, column=4, padx=(10), pady=10)
 
 btn_f5 = tk.Button(top_frame, text='5', width='5', command=showFifth)
-btn_f5.grid(row=0, column=4, padx=(10), pady=10)
+btn_f5.grid(row=0, column=5, padx=(10), pady=10)
 
 btn_f6 = tk.Button(top_frame, text='6', width='5', command=showSixth)
-btn_f6.grid(row=0, column=5, padx=(10), pady=10)
+btn_f6.grid(row=0, column=6, padx=(10), pady=10)
 
 btn_f7 = tk.Button(top_frame, text='7', width='5', command=showSeventh)
-btn_f7.grid(row=0, column=6, padx=(10), pady=10)
+btn_f7.grid(row=0, column=7, padx=(10), pady=10)
 
 btn_f8 = tk.Button(top_frame, text='8', width='5', command=showEighth)
-btn_f8.grid(row=0, column=7, padx=(10), pady=10)
+btn_f8.grid(row=0, column=8, padx=(10), pady=10)
 
 btn_f9 = tk.Button(top_frame, text='9', width='5', command=showNinth)
-btn_f9.grid(row=0, column=8, padx=(10), pady=10)
+btn_f9.grid(row=0, column=9, padx=(10), pady=10)
 
 btn_f10 = tk.Button(top_frame, text='10', width='5', command=showTenth)
-btn_f10.grid(row=0, column=9, padx=(10), pady=10)
+btn_f10.grid(row=0, column=10, padx=(10), pady=10)
 
 btn_f11 = tk.Button(top_frame, text='11', width='5', command=showEleven)
-btn_f11.grid(row=0, column=10, padx=(10), pady=10)
+btn_f11.grid(row=0, column=11, padx=(10), pady=10)
+
+btn_f13 = tk.Button(top_frame, text='13', width='5', command=showThirteenth)
+btn_f13.grid(row=0, column=12, padx=(10), pady=10)
+
+btn_f14 = tk.Button(top_frame, text='14', width='5', command=showFourthteen)
+btn_f14.grid(row=0, column=13, padx=(10), pady=10)
+
 
 # bottom Frame ----------------------------------------------------
 bottom_frame = tk.Frame(mainwindow, bg="yellow", padx=5, pady=5)
@@ -81,10 +95,10 @@ bottom_frame.rowconfigure(0, weight=1)
 redFrame = tk.Frame(bottom_frame, bg="lightblue", padx=5, pady=5)
 redFrame.place(x=0, y=0, relwidth=1.0, relheight=1.0)
 
-Label_1a = tk.Label(redFrame,text="Gamimg Center",font=("Times new roman", 20),bg="lightblue")
+Label_1a = tk.Label(redFrame,text="~~~~~~~~~~~~~~~~~~ Gamimg Center ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="lightblue")
 Label_1a.pack()
 
-Label_2a = tk.Label(redFrame,text=" Which do you prefer ?",font=8)
+Label_2a = tk.Label(redFrame,text=" Which do you prefer ?",font=("Times new roman", 26))
 Label_2a.configure(bg="lightblue")
 Label_2a.configure(foreground ="black")
 Label_2a.pack()
@@ -110,10 +124,10 @@ Button_3a.pack()
 greenFrame = tk.Frame(bottom_frame, bg="lightblue", padx=5, pady=5)
 greenFrame.place(x=0, y=0, relwidth=1.0, relheight=1.0)
 
-Label_1b = tk.Label(greenFrame,text="Gamimg Center",font=("Times new roman", 20),bg="lightblue")
+Label_1b = tk.Label(greenFrame,text="~~~~~~~~~~~~~~~~~~ Gamimg Center ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="lightblue")
 Label_1b.pack()
 
-Label_2b = tk.Label(greenFrame,text=" Which do you prefer ?",font=8)
+Label_2b = tk.Label(greenFrame,text=" Which do you prefer ?",font=("Times new roman", 26))
 Label_2b.configure(bg="lightblue")
 Label_2b.configure(foreground ="black")
 Label_2b.pack()
@@ -134,10 +148,10 @@ Button_2b.pack()
 blueFrame = tk.Frame(bottom_frame, bg="lightblue", padx=5, pady=5)
 blueFrame.place(x=0, y=0, relwidth=1.0, relheight=1.0)
 
-Label_1c = tk.Label(blueFrame,text="Gamimg Center",font=("Times new roman", 20),bg="lightblue")
+Label_1c = tk.Label(blueFrame,text="~~~~~~~~~~~~~~~~~~ Gamimg Center ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="lightblue")
 Label_1c.pack()
 
-Label_2c = tk.Label(blueFrame,text=" Which do you prefer ?",font=8)
+Label_2c = tk.Label(blueFrame,text=" Which do you prefer ?",font=("Times new roman", 26))
 Label_2c.configure(bg="lightblue")
 Label_2c.configure(foreground ="black")
 Label_2c.pack()
@@ -160,7 +174,7 @@ Button_2c.pack()
 yellowFrame = tk.Frame(bottom_frame, bg="tomato", padx=5, pady=5)
 yellowFrame.place(x=0, y=0, relwidth=1.0, relheight=1.0)
 
-Label_1d = tk.Label(yellowFrame,text="Congratulations",font=("Times new roman", 20),bg="tomato")
+Label_1d = tk.Label(yellowFrame,text="~~~~~~~~~~~~~~~~~~ Congratulations ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="tomato")
 Label_1d.pack()
 
 Label_2d = tk.Label(yellowFrame,text="Your console is Nintendo Switch",font=("Times new roman", 26),bg="tomato")
@@ -176,7 +190,7 @@ Button_1d.pack()
 fifthFrame = tk.Frame(bottom_frame, bg="royalblue", padx=5, pady=5)
 fifthFrame.place(x=0, y=0, relwidth=1.0, relheight=1.0)
 
-Label_1e = tk.Label(fifthFrame,text="Congratulations",font=("Times new roman", 20),bg="royalblue")
+Label_1e = tk.Label(fifthFrame,text="~~~~~~~~~~~~~~~~~~ Congratulations ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="royalblue")
 Label_1e.pack()
 
 Label_2e = tk.Label(fifthFrame,text="Your console is Playstation",font=("Times new roman", 26),bg="royalblue")
@@ -192,10 +206,10 @@ Button_1e.pack()
 sixthFrame = tk.Frame(bottom_frame, bg="lightblue", padx=5, pady=5)
 sixthFrame.place(x=0, y=0, relwidth=1.0, relheight=1.0)
 
-Label_1f = tk.Label(sixthFrame,text="Gamimg Pop Quiz",font=("Times new roman", 20),bg="lightblue")
+Label_1f = tk.Label(sixthFrame,text="~~~~~~~~~~~~~~~~~~ Gamimg Center ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="lightblue")
 Label_1f.pack()
 
-Label_2f = tk.Label(sixthFrame,text=" Which do you prefer ?",font=8)
+Label_2f = tk.Label(sixthFrame,text=" Which do you prefer ?",font=("Times new roman", 26))
 Label_2f.configure(bg="lightblue")
 Label_2f.configure(foreground ="black")
 Label_2f.pack()
@@ -215,7 +229,7 @@ Button_2f.pack()
 seventhFrame = tk.Frame(bottom_frame, bg="springgreen", padx=5, pady=5)
 seventhFrame.place(x=0, y=0, relwidth=1.0, relheight=1.0)
 
-Label_1g = tk.Label(seventhFrame,text="Congratulations",font=("Times new roman", 20),bg="springgreen")
+Label_1g = tk.Label(seventhFrame,text="~~~~~~~~~~~~~~~~~~ Congratulations ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="springgreen")
 Label_1g.pack()
 
 Label_2g = tk.Label(seventhFrame,text="Your console is Xbox",font=("Times new roman", 26),bg="springgreen")
@@ -232,11 +246,17 @@ Button_1g.pack()
 eighthFrame = tk.Frame(bottom_frame, bg="lightgray", padx=5, pady=5)
 eighthFrame.place(x=0, y=0, relwidth=1.0, relheight=1.0)
 
-Label_1h = tk.Label(eighthFrame,text="Congratulations",font=("Times new roman", 20),bg="lightgray")
+Label_1h = tk.Label(eighthFrame,text="~~~~~~~~~~~~~~~~~~ Congratulations ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="lightgray")
 Label_1h.pack()
 
 Label_2h = tk.Label(eighthFrame,text="PC Master Race",font=("Times new roman", 26),bg="lightgray")
 Label_2h.pack()
+
+def b1ee():
+   ThirteenthFrame.tkraise() 
+
+Button_2e = tk.Button(eighthFrame, text=("NEXT"),command=b1ee)
+Button_2e.pack()
 
 # Ninth Frame--------------------------------------------------------------
 ninthFrame = tk.Frame(bottom_frame, bg="tomato", padx=5, pady=5)
@@ -247,21 +267,21 @@ my_tkVar.set("Try Again")
 
 def review1():
     T1.configure(text="Metascore",font=15)
-    T2.configure(text="97",font=20)
+    T2.configure(text="[97]",font=20)
     T3.configure(text="🏆#1 Best Switch Game of 2017",font=15)
     T4.configure(text="🏆#1 Most Discussed Switch Game of 2017",font=15)
     T5.configure(text="🏆#1  Most Shared Switch Game of 2017",font=15)
 
 def review2():
     T1.configure(text="Metascore",font=15)
-    T2.configure(text="97",font=20)
+    T2.configure(text="[97]",font=20)
     T3.configure(text="🏆 #1 Best Family Game",font=15)
     T4.configure(text="🏆 #1 Best of Gamescom",font=15)
     T5.configure(text="🏆 #1 Most Wanted Consumer Award",font=15)
 
 def review3():
     T1.configure(text="Metascore",font=15)
-    T2.configure(text="92",font=20)
+    T2.configure(text="[92]",font=20)
     T3.configure(text="🥇Kid's Choice Ward [Nominee]",font=15)
     T4.configure(text="🥇The Game Award [Nominee]",font=15)
     T5.configure(text="🥇Mario Game",font=15)
@@ -273,7 +293,7 @@ def func():
 Label_1t = tk.Label(ninthFrame,text="~~~~~~~~~~~~~~~~~~ Gamimg Center ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="tomato")
 Label_1t.pack()
     
-L1 = tk.Label(ninthFrame, text="Choose A Genres", font=("Times new roman", 26),bg="tomato")
+L1 = tk.Label(ninthFrame, text="Choose A Genre", font=("Times new roman", 26),bg="tomato")
 L1.pack()
 
 radio1 = tk.Radiobutton(ninthFrame)
@@ -297,7 +317,7 @@ L4.pack()
 L3 = tk.Label(ninthFrame, text="---------------------------",bg="tomato")
 L3.pack()
 
-B1 = tk.Button(ninthFrame, text="Reveals", command=func)
+B1 = tk.Button(ninthFrame, text="Reveal", command=func)
 B1.pack()
 
 blank=tk.Label(ninthFrame,text="",bg="tomato")
@@ -319,8 +339,247 @@ T5.pack()
 tenthFrame= tk.Frame(bottom_frame, bg="royalblue", padx=5, pady=5)
 tenthFrame.place(x=0, y=0, relwidth=1.0, relheight=1.0)
 
+my_tkVar1 = tk.StringVar()
+my_tkVar1.set("Try Again")
+
+def review1a():
+    T1a.configure(text="Metascore",font=15)
+    T2a.configure(text="[83]",font=20)
+    T3a.configure(text="🏅#19 Best PS4 Game of 2020",font=15)
+    T4a.configure(text="🏅#2 Most Discussed PS4 Game of 2020",font=15)
+    T5a.configure(text="🏅#5 Most Shared PS4 Game of 2020",font=15)
+
+def review2a():
+    T1a.configure(text="Metascore",font=15)
+    T2a.configure(text="[94]",font=20)
+    T3a.configure(text="🏅 #2 Best PS4 Game of 2018",font=15)
+    T4a.configure(text="🏆 #1 Most Discussed PS4 Game of 2018",font=15)
+    T5a.configure(text="🏆 #1 Most Shared PS4 Game of 2018",font=15)
+
+def review3a():
+    T1a.configure(text="Metascore",font=15)
+    T2a.configure(text="[95]",font=20)
+    T3a.configure(text="🏆 #1 Best PS4 Game of 2020",font=15)
+    T4a.configure(text="🏅 #12 Most Discussed PS4 Game of 2020",font=15)
+    T5a.configure(text="🏅 Game of the Year [Nominee]",font=15)
+
+def func2():
+    temp_var = my_tkVar1.get()
+    L4a.configure(text=temp_var)
+
+Label_1a = tk.Label(tenthFrame,text="~~~~~~~~~~~~~~~~~~ Gamimg Center ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="royalblue")
+Label_1a.pack()
+    
+L1a = tk.Label(tenthFrame, text="Choose A Genre", font=("Times new roman", 26),bg="royalblue")
+L1a.pack()
+
+radio1a = tk.Radiobutton(tenthFrame)
+radio1a.config(text="Action", variable=my_tkVar1,value="❀God of War❀",bg="royalblue",command=review2a)
+radio1a.pack()
+
+radio2a = tk.Radiobutton(tenthFrame)
+radio2a.config(text="Adventure", variable=my_tkVar1, value="❀Ghost of Tsushima❀",bg="royalblue",command=review1a)
+radio2a.pack()
+
+radio3a = tk.Radiobutton(tenthFrame)
+radio3a.config(text="JRPG", variable=my_tkVar1, value="❀Persona 5 Royal❀",bg="royalblue",command = review3a)
+radio3a.pack()
+
+L2a = tk.Label(tenthFrame, text="---------------------------",bg="royalblue")
+L2a.pack()
+
+L4a = tk.Label(tenthFrame, text="", font=("Times new roman", 18),bg="royalblue")
+L4a.pack()
+
+L3a = tk.Label(tenthFrame, text="---------------------------",bg="royalblue")
+L3a.pack()
+
+B1a = tk.Button(tenthFrame, text="Reveal", command=func2)
+B1a.pack()
+
+blank=tk.Label(tenthFrame,text="",bg="royalblue")
+blank.pack()
+
+T1a = tk.Label(tenthFrame,text="",bg="royalblue")
+T2a = tk.Label(tenthFrame,text="",bg="royalblue")
+T3a = tk.Label(tenthFrame,text="",bg="royalblue")
+T4a = tk.Label(tenthFrame,text="",bg="royalblue")
+T5a = tk.Label(tenthFrame,text="",bg="royalblue")
+
+T1a.pack()
+T2a.pack()
+T3a.pack()
+T4a.pack()
+T5a.pack()
+
+
 #eleven-----------------------------------------------------------------------
 eleventhFrame=tk.Frame(bottom_frame, bg="springgreen", padx=5, pady=5)
 eleventhFrame.place(x=0, y=0, relwidth=1.0, relheight=1.0)
 
+my_tkVar2 = tk.StringVar()
+my_tkVar2.set("Try Again")
+
+def review1b():
+    T1b.configure(text="Metascore",font=15)
+    T2b.configure(text="[86]",font=20)
+    T3b.configure(text="🏅#11 Best Xbox Series X Game of 2021",font=15)
+    T4b.configure(text="🏆 #1 Most Discussed Xbox Series X Game of 2021",font=15)
+    T5b.configure(text="🏆 #1 Player's Voice Award of 2021",font=15)
+
+def review2b():
+    T1b.configure(text="Metascore",font=15)
+    T2b.configure(text="[92]",font=20)
+    T3b.configure(text="🏅#2 Best Xbox Series X Game of 2021",font=15)
+    T4b.configure(text="🏅#2 Most Discussed Xbox Series X Game if 2021",font=15)
+    T5b.configure(text="🏆 #1 Best Sports/Racing Game of 2021",font=15)
+
+def review3b():
+    T1b.configure(text="Metascore",font=15)
+    T2b.configure(text="[90]",font=20)
+    T3b.configure(text="🏅#3 Best Xbox Series X Game of 2021",font=15)
+    T4b.configure(text="🏅#9 Most Discussed Xbox Series X Game of 2021",font=15)
+    T5b.configure(text="🏆 #1 Best Simulation Game of 2021",font=15)
+
+def func3():
+    temp_var = my_tkVar2.get()
+    L4b.configure(text=temp_var)
+
+Label_1b = tk.Label(eleventhFrame,text="~~~~~~~~~~~~~~~~~~ Gamimg Center ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="springgreen")
+Label_1b.pack()
+
+L1b = tk.Label(eleventhFrame, text="Choose A Genre", font=("Times new roman", 26),bg="springgreen")
+L1b.pack()
+
+radio1b = tk.Radiobutton(eleventhFrame)
+radio1b.config(text="Action", variable=my_tkVar2,value="❀Halo Infinite❀",bg="springgreen",command=review1b)
+radio1b.pack()
+
+radio2b = tk.Radiobutton(eleventhFrame)
+radio2b.config(text="Adventure", variable=my_tkVar2, value="❀Forza Horizon 5❀",bg="springgreen",command=review2b)
+radio2b.pack()
+
+radio3b = tk.Radiobutton(eleventhFrame)
+radio3b.config(text="Simulation", variable=my_tkVar2, value="❀Microsoft Flight Simulator❀",bg="springgreen",command=review3b)
+radio3b.pack()
+
+L2b = tk.Label(eleventhFrame, text="---------------------------",bg="springgreen")
+L2b.pack()
+
+L4b = tk.Label(eleventhFrame, text="", font=("Times new roman", 18),bg="springgreen")
+L4b.pack()
+
+L3b = tk.Label(eleventhFrame, text="---------------------------",bg="springgreen")
+L3b.pack()
+
+B1b = tk.Button(eleventhFrame, text="Reveal",command=func3)
+B1b.pack()
+
+blankb=tk.Label(eleventhFrame,text="",bg="springgreen")
+blankb.pack()
+
+T1b = tk.Label(eleventhFrame,text="",bg="springgreen")
+T2b = tk.Label(eleventhFrame,text="",bg="springgreen")
+T3b = tk.Label(eleventhFrame,text="",bg="springgreen")
+T4b = tk.Label(eleventhFrame,text="",bg="springgreen")
+T5b = tk.Label(eleventhFrame,text="",bg="springgreen")
+
+T1b.pack()
+T2b.pack()
+T3b.pack()
+T4b.pack()
+T5b.pack()
+
+# Thirteenth ------------------------------------------------------------------------------------------------------------------ 
+ThirteenthFrame=tk.Frame(bottom_frame, bg="lightgray", padx=5, pady=5)
+ThirteenthFrame.place(x=0, y=0, relwidth=1.0, relheight=1.0)
+
+my_tkVar3 = tk.StringVar()
+my_tkVar3.set("Try Again")
+
+def review1c():
+    T1c.configure(text="Metascore",font=15)
+    T2c.configure(text="[93]",font=20)
+    T3c.configure(text="🏆 #1 Best PC Game of 2020",font=15)
+    T4c.configure(text="🏅#8 Most Discussed PC Game of 2020",font=15)
+    T5c.configure(text="🏆 #1 Best VR Game of 2020",font=15)
+
+def review2c():
+    T1c.configure(text="Metascore",font=15)
+    T2c.configure(text="[93]",font=20)
+    T3c.configure(text="🏅#2 Best PC Game of 2020",font=15)
+    T4c.configure(text="🏅#17 Most Discussed PC Game of 2020",font=15)
+    T5c.configure(text="🏆 #1 Best Action Game of 2020",font=15)
+
+def review3c():
+    T1c.configure(text="Metascore",font=15)
+    T2c.configure(text="[91]",font=20)
+    T3c.configure(text="🏅#4 Best PC Game of 2020",font=15)
+    T4c.configure(text="🏅#29 Most Discussed PC Game of 2020",font=15)
+    T5c.configure(text="🏅Best Strategy/Tactics Games [Nominee]",font=15)
+
+def func4():
+    temp_var = my_tkVar3.get()
+    L4c.configure(text=temp_var)
+
+Label_1c = tk.Label(ThirteenthFrame,text="~~~~~~~~~~~~~~~~~~ Gamimg Center ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="lightgray")
+Label_1c.pack()
+
+L1c = tk.Label(ThirteenthFrame, text="Choose A Genre", font=("Times new roman", 26),bg="lightgray")
+L1c.pack()
+
+radio1c = tk.Radiobutton(ThirteenthFrame)
+radio1c.config(text="Action", variable=my_tkVar3,value="❀Half-Life: Alyx❀",bg="lightgray",command=review1c)
+radio1c.pack()
+
+radio2c = tk.Radiobutton(ThirteenthFrame)
+radio2c.config(text="Adventure", variable=my_tkVar3, value="❀Hades❀",bg="lightgray",command=review2c)
+radio2c.pack()
+
+radio3c = tk.Radiobutton(ThirteenthFrame)
+radio3c.config(text="Strategy", variable=my_tkVar3, value="❀Crusader Kings III❀",bg="lightgray",command=review3c)
+radio3c.pack()
+
+L2c = tk.Label(ThirteenthFrame, text="---------------------------",bg="lightgray")
+L2c.pack()
+
+L4c = tk.Label(ThirteenthFrame, text="", font=("Times new roman", 18),bg="lightgray")
+L4c.pack()
+
+L3c = tk.Label(ThirteenthFrame, text="---------------------------",bg="lightgray")
+L3c.pack()
+
+B1c = tk.Button(ThirteenthFrame, text="Reveal",command=func4)
+B1c.pack()
+
+blankc=tk.Label(ThirteenthFrame,text="",bg="lightgray")
+blankc.pack()
+
+T1c = tk.Label(ThirteenthFrame,text="",bg="lightgray")
+T2c = tk.Label(ThirteenthFrame,text="",bg="lightgray")
+T3c = tk.Label(ThirteenthFrame,text="",bg="lightgray")
+T4c = tk.Label(ThirteenthFrame,text="",bg="lightgray")
+T5c = tk.Label(ThirteenthFrame,text="",bg="lightgray")
+
+T1c.pack()
+T2c.pack()
+T3c.pack()
+T4c.pack()
+T5c.pack()
+
+#FourthteenFrame --------------------------------------------------------------------------------------------
+
+FourthteenFrame=tk.Frame(bottom_frame, bg="lightblue", padx=5, pady=5)
+FourthteenFrame.place(x=0, y=0, relwidth=1.0, relheight=1.0)
+
+Label_1g = tk.Label(FourthteenFrame,text="~~~~~~~~~~~~~~~~~~ Gamimg Center ~~~~~~~~~~~~~~~~~~",font=("Times new roman", 20),bg="lightblue")
+Label_1g.pack()
+
+Label_2g = tk.Label(FourthteenFrame,text="Click Begin When You Are Ready!",font=("Times new roman", 20),bg="lightblue")
+Label_2g.pack()
+
+B1g = tk.Button(FourthteenFrame, text="BEGIN",command=showRed)
+B1g.pack()
+
 mainwindow.mainloop()
+
